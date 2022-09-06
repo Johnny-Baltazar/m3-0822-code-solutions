@@ -1,0 +1,38 @@
+.hot-button {
+  padding: .5rem;
+}
+
+.no-clicks {
+  background-color: black;
+  color: white;
+}
+
+.three-clicks {
+  background-color: #33006F;
+  color: white;
+}
+
+.six-clicks {
+  background-color: #662d91;
+  color: white;
+}
+
+.nine-clicks {
+  background-color: #fc6c85;
+  color: white;
+}
+
+.twelve-clicks {
+  background-color: #FFAC1C;
+  color: black;
+}
+
+.fifteen-clicks {
+  background-color: yellow;
+  color: black;
+}
+
+.eighteen-clicks {
+  background-color: white;
+  color: black;
+}
