@@ -1,0 +1,41 @@
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.switch {
+  width: 7rem;
+  height: 4rem;
+  border: .2rem solid black;
+  border-radius: 3rem;
+
+}
+
+.toggle{
+  border: 0.2rem solid black;
+  border-radius: 3rem;
+  height: 3.85rem;
+  width: 4rem;
+  background-color: white;
+  position: relative;
+    bottom: .11rem;
+    right: .15rem;
+}
+
+.color-switch {
+  background-color: green;
+}
+
+.toggle-right {
+  position: relative;
+  left: 2.76rem;
+  bottom: .1rem;
+}
+
+.text-class {
+  margin-left: 1rem;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
