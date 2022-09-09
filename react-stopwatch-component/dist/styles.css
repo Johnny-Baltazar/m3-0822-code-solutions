@@ -1,0 +1,38 @@
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.circle {
+  border: .2rem solid black;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.text {
+  position: relative;
+  left: 3.75rem;
+  top: 2.25rem;
+  font-size: 5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+  margin-top: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.greater-ten {
+  left: 2.25rem;
+}
+
+.greater-hundred {
+  left: .65rem;
+}
