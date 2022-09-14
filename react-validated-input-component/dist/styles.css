@@ -1,0 +1,31 @@
+.hidden {
+  display: none;
+}
+
+h4,
+h3 {
+  font-family: sans-serif, arial, verdana;
+  font-weight: 500;
+}
+
+.color-red {
+  color: red;
+}
+
+.unapproved-container {
+  display: flex;
+  align-items: center;
+}
+
+.approved-container {
+  display: flex;
+  align-items: end;
+}
+
+i {
+  margin-left: 1rem;
+}
+
+.check-mark {
+  color: green;
+}
