@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.row {
+  margin-left: 1rem;
+  width: 15%;
+}
+
+.hidden {
+  display: none;
+}
+
+.shade {
+  background: rgb(0 0 0 / 60%);
+  width: 100vw;
+  height: 100vh;
+}
+
+i {
+  margin-top: 1.3rem;
+}
