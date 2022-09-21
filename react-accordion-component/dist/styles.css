@@ -1,0 +1,36 @@
+.hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  cursor: pointer;
+}
+
+.topic {
+  text-align: center;
+  width: 30%;
+  margin: 0.2rem 0;
+}
+
+.topic-header {
+  border: 0.2rem solid black;
+  margin-bottom: 0.5rem;
+  background-color: lightgray;
+}
+
+.topic-details {
+  border: 0.2rem solid black;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
