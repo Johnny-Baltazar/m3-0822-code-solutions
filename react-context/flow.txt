@@ -1,0 +1,33 @@
+Describe the flow of the code in writing, including the client, server, and database.
+User can sign up:
+On the "homepage" of the app, when a user clicks "Register now" or "Sign Up," within the "AuthPage" component, the 'route.path" and "action," objects are assigned the value of
+"sign-in," and the "welcomeMessage" object is assigned the string "Create an account to get started." Within the "authForm" component, if the value of "action" is
+"sign-up" then a register form is rendered and exported into the "AuthPage" component, and a "handleChange" eventListener and setState method assigns the
+input value to the states "name" and "value." Still within component "AuthForm," a "handleSubmit" eventListener listens for button submitions
+of the "Register" button, and sends a POST request thru a fetch method with the path dependent on the value "action" object within the path.
+The "AuthForm" component is rendered within the "AuthPage" component.
+
+User can sign in:
+When on the "homepage" of the app, the "Home" component returns the component "Redirect" if not the value of "this.context.user" assigning the string "sign-in" to the
+to the property "to." The "Redirect" component assigns the "to" property to the object "url.hash" then replaces the location of the window with the "url" object. The "Redirect"
+component is exported to the "AuthPage" component returning the value of "welcomeMessage" as "Please sign in to continue," based on the route path of "sign-in." The "handleChange"
+eventListener of the "AuthForm" component updates the values of the "name" and "value" states based on user input of the password and username. The "handleSubmit method listens for
+clicks on the "Log In" button, and sends a POST request with a fetch method to "/api/auth/sign-in" verifying if there is a "result.user" and "result.token" returning the "onSignIn"
+method of the "this.props" object being called with the result. If the "App" component mounts, an eventListener within the componentDidMount method of the "App" component listens for a
+hashchange then updates the property of the rout state to "parseRoute(window.location.hash)," also assigning the return value of "window.localStorage.getItem('react-context-jwt')" to the
+toke object. If there is a "token" value, the "jwtDecode(token)" method is assigned to the object user, otherwise the value of the user object is null.
+Lastly, within the componentDidMount method, the "user" state is updated, and the "isAuthorizing" state is updated to false. Also in the "App" component, the "handleSignIn" method
+with the parameter "result," destructures result, assigning the properties of user and token to the user and token objects. App-component: the renderPage method assigns "this.state.route"
+to the object "path," and with the path equalling "sign-in" or "sign-up," the "Auth" component is returned.
+
+User can stay signed in (even if they refresh the page):
+AuthPage component: tis component tests is a "user" is logged in, then the "Redirect" component is returned with the "to" property set to "". Redirect component: this component tests if the
+"to" property is set to an empty string ("") then a "#" is assigned to "url.hash" which is then called as an argument by the replace method of the window.location. Home component: the home component
+tests if there is a user, and returns the home page. App component: within the "handleSignIn" method, the 'react-context-jwt' token is set within localStorage. If the component mounts, the 'react-context-jwt' object
+is retrieved from localStorage and is assigned to the object token. If the token matches the user token and the path equals an empty string, then the home page is loaded.
+
+User can sign out:
+App component: the "handleSignOut" method removes the "react-context-jwt" object and sets the user state to null. Navbar component: the "Navbar" component tests if the user strictly equals null
+then when found to be true, sets the values of one anchor tags "href" attribute to "#sign-in" and the other anchor tags "href" attributes to "#sign-up." Home component: the home component tests if the "this.context.user" is
+false, then returns the "Redirect" component assigning the "to" property to "sign-in." Redirect component: the "redirect" component assigns the "to" property to "url.hash" then replaces the "url" within the "window.location,"
+shown as "http://localhost:3000/#sign-in."
